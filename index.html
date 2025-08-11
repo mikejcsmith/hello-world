@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Toggle Button</title>
+  <style>
+    #color-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <button id="color-btn">Toggle Color</button>
+  <script>
+    const colors = ['red', 'green', 'blue', 'yellow', 'purple'];
+    let index = 0;
+    const btn = document.getElementById('color-btn');
+    btn.addEventListener('click', () => {
+      btn.style.backgroundColor = colors[index];
+      index = (index + 1) % colors.length;
+    });
+  </script>
+</body>
+</html>
